@@ -1,0 +1,69 @@
+:root {
+    /* Colores principales de las imágenes */
+    --color-navy: #2a245a;       /* Oscuro - ideal para textos principales, fondos oscuros */
+    --color-lavender: #8d76b4;   /* Medio - ideal para bordes, textos secundarios, estados */
+    --color-orchid: #b464a4;     /* Medio/Acento - ideal para destacar, botones, hover */
+    --color-turquoise: #71c7d8;  /* Claro/Acento - ideal para detalles, hover, llamadas a la acción */
+
+    /* Variantes de soporte para el diseño (Claridad y fondo) */
+    --color-bg-light: #f5f4f8;    /* Fondo muy claro basado en el tono lavanda */
+    --color-text-dark: #1e1a3e;   /* Un azul marino casi negro para legibilidad */
+    --color-text-muted: #5e5a80;  /* Gris azulado para textos secundarios */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+@font-face {
+    font-family: 'Heading Now';
+    src: url('/fonts/HeadingNowTrial-68Heavy.ttf') format('truetype');
+    font-weight: 900; 
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Heading Now', sans-serif;
+    font-weight: 900;
+    color: var(--color-navy);
+    line-height: 1.1; 
+}
+
+p, span, div {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: var(--color-text-dark); 
+}
+
+h1 {
+    font-size: 80px;
+    color: var(--color-navy);
+}
+
+h2 {
+    font-size: 60px;
+}
+
+h3 {
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 32px;
+}
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 18px;
+}
