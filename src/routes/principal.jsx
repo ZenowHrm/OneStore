@@ -8,7 +8,7 @@ export function Principal() {
                 <div className="principal-text-container">
                     <p>Tan único como tú</p>
                     <h1>
-                        <img src="/public/logo.svg" alt="" />
+                        <img src="/logo.svg" alt="" />
                         Store
                     </h1>
                 </div>
