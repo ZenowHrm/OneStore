@@ -7,7 +7,10 @@ export function Principal() {
             <div className="principal-left-container">
                 <div className="principal-text-container">
                     <p>Tan único como tú</p>
-                    <h1>OneStore</h1>
+                    <h1>
+                        <img src="/public/logo.svg" alt="" />
+                        Store
+                    </h1>
                 </div>
                 <div className="principal-buttons-container">
                     <button className="principal-button-custom">
@@ -32,6 +35,23 @@ export function Principal() {
                 </div>
             </div>
         </div>
+        <div className="principal-see-more">
+            <p>
+                Ver mas
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-down">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M6 9l6 6l6 -6" />
+            </svg>
+        </div>
+    </section>
+
+    <section className="principal-for-we">
+        <h2>Sobre nosotros</h2>
+        <h3>En un mundo lleno de copias, tú eres el origen.</h3>
+        <p>Vivimos rodeados de producción masiva, donde la industria dicta cómo vestir, cómo lucir y cómo encajar. Nos empujan a usar el mismo molde y a llevar exactamente lo mismo que miles de personas más. Pero la realidad es simple: nadie es igual a otro. <strong>Así nació One.</strong></p>
+        <p>Creemos que tu ropa debe hablar por ti antes de que digas una sola palabra. No somos solo tela, hilos o estampados; somos el lienzo donde tus ideas, tu arte, tus momentos y tu esencia cobran vida. Cada prenda que creamos está pensada para ser una pieza de colección irrepetible, hecha exclusivamente para ti.</p>
+        <p>En <strong>One</strong> no vestimos cuerpos, vestimos personalidades. No seguimos tendencias: te damos el espacio para que crees la tuya. Porque cuando te atreves a ser auténtico, dejas de ser uno más para convertirte en el número uno.</p>
     </section>
     </>
 
