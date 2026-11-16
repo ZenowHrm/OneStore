@@ -1,6 +1,6 @@
 .principal-header {
     width: 100%;
-    height: 100dvh;
+    height: 100vh;
     background-image: 
         /* Rejilla técnica sutil estilo urbano */
         linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 12%, transparent) 1px, transparent 1px),
@@ -214,7 +214,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1250px) {
     .principal-header {
         background-image:
         linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 12%, transparent) 1px, transparent 1px),
@@ -287,3 +287,163 @@
 }
 
 /* For we */
+
+.principal-for-we {
+    position: relative;
+    width: 100%;
+    padding: 6.5rem 2rem 7.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--color-text-dark);
+    background-image:
+        radial-gradient(
+            circle at 88% 12%,
+            color-mix(in srgb, var(--color-orchid) 28%, transparent) 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 82% 92%,
+            color-mix(in srgb, var(--color-orchid) 32%, transparent) 0%,
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            var(--color-text-dark) 0%,
+            color-mix(in srgb, var(--color-navy) 65%, transparent) 100%
+        ),
+        url("/rizos.svg");
+    background-size: cover;
+    background-position: center;
+
+    /* Código de barras urbano superior centrado */
+    &::before {
+        content: "";
+        display: block;
+        width: 84px;
+        height: 28px;
+        margin-bottom: 1.25rem;
+        background: repeating-linear-gradient(
+            90deg,
+            var(--color-bg-light) 0px,
+            var(--color-bg-light) 3px,
+            transparent 3px,
+            transparent 6px,
+            var(--color-bg-light) 6px,
+            var(--color-bg-light) 7px,
+            transparent 7px,
+            transparent 11px,
+            var(--color-bg-light) 11px,
+            var(--color-bg-light) 15px,
+            transparent 15px,
+            transparent 18px
+        );
+        opacity: 0.9;
+    }
+
+    /* Título principal con efecto 3D extruido en bloque */
+    h2 {
+        position: relative;
+        font-family: 'Heading Now', sans-serif;
+        font-size: clamp(3rem, 9vw, 6.8rem);
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        line-height: 0.95;
+        color: var(--color-bg-light);
+        transform: skewX(-6deg);
+        margin-bottom: 2.2rem;
+        -webkit-text-stroke: 2px var(--color-text-dark);
+        text-shadow:
+            0px 2px 0px var(--color-orchid),
+            -2px 4px 0px var(--color-orchid),
+            -4px 6px 0px var(--color-orchid),
+            -6px 8px 0px var(--color-orchid),
+            -8px 10px 0px var(--color-navy);
+    }
+
+    /* Subtítulo con franja tipo cinta recortada turquesa */
+    h3 {
+        position: relative;
+        max-width: 780px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: clamp(1.25rem, 3.2vw, 2.35rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        line-height: 1.45;
+        color: var(--color-bg-light);
+        margin-bottom: 2.8rem;
+
+        span {
+            display: inline-block;
+            padding: 0.1rem 0.7rem;
+            margin-left: 0.25rem;
+            color: var(--color-text-dark);
+            background-color: var(--color-turquoise);
+            font-weight: 900;
+            clip-path: polygon(1% 4%, 99% 0%, 100% 93%, 98% 100%, 0% 96%, 2% 48%);
+        }
+    }
+
+    /* Si NO usas <span> dentro del h3, resalta todo el h3 con un subrayado tipo cinta turquesa */
+    h3:not(:has(span)) {
+        background: linear-gradient(
+            180deg,
+            transparent 58%,
+            color-mix(in srgb, var(--color-turquoise) 35%, transparent) 58%
+        );
+        padding: 0 0.5rem;
+    }
+
+    /* Párrafos centrados y limpios */
+    p {
+        max-width: 680px;
+        font-size: 1.15rem;
+        line-height: 1.7;
+        color: color-mix(in srgb, var(--color-bg-light) 90%, var(--color-lavender));
+        margin-bottom: 1.5rem;
+    }
+
+    /* Resaltado de la marca <strong>One</strong> en tono orquídea */
+    p strong {
+        color: var(--color-orchid);
+        font-weight: 800;
+    }
+
+    /* Último párrafo destacado con subrayado urbano turquesa (como en la imagen) */
+    p:last-of-type {
+        position: relative;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-bg-light);
+        margin-top: 0.5rem;
+        padding-bottom: 0.6rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) rotate(-1deg);
+            width: min(100%, 420px);
+            height: 4px;
+            background-color: var(--color-turquoise);
+            border-radius: 2px;
+            box-shadow: 0 0 10px color-mix(in srgb, var(--color-turquoise) 50%, transparent);
+        }
+    }
+}
+
+/* Ajuste responsivo en pantallas pequeñas */
+@media (max-width: 768px) {
+    .principal-for-we {
+        padding: 5rem 1.5rem 6rem;
+
+        h3::after {
+            display: none;
+        }
+    }
+}

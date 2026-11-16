@@ -48,9 +48,8 @@ export function Principal() {
 
     <section className="principal-for-we">
         <h2>Sobre nosotros</h2>
-        <h3>En un mundo lleno de copias, tú eres el origen.</h3>
+        <h3>En un mundo lleno de copias, <span>tú eres el origen.</span></h3>
         <p>Vivimos rodeados de producción masiva, donde la industria dicta cómo vestir, cómo lucir y cómo encajar. Nos empujan a usar el mismo molde y a llevar exactamente lo mismo que miles de personas más. Pero la realidad es simple: nadie es igual a otro. <strong>Así nació One.</strong></p>
-        <p>Creemos que tu ropa debe hablar por ti antes de que digas una sola palabra. No somos solo tela, hilos o estampados; somos el lienzo donde tus ideas, tu arte, tus momentos y tu esencia cobran vida. Cada prenda que creamos está pensada para ser una pieza de colección irrepetible, hecha exclusivamente para ti.</p>
         <p>En <strong>One</strong> no vestimos cuerpos, vestimos personalidades. No seguimos tendencias: te damos el espacio para que crees la tuya. Porque cuando te atreves a ser auténtico, dejas de ser uno más para convertirte en el número uno.</p>
     </section>
     </>
