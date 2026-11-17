@@ -447,3 +447,797 @@
         }
     }
 }
+
+/* ==========================================================================
+   ENCABEZADOS COMPARTIDOS DE SECCIÓN
+   ========================================================================== */
+
+.principal-section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3.5rem;
+
+    .principal-section-tag {
+        font-size: clamp(0.75rem, 1.5vw, 1rem);
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--color-turquoise);
+        background-color: var(--color-text-dark);
+        padding: 0.25rem 0.85rem;
+        border-left: 4px solid var(--color-orchid);
+        margin-bottom: 0.85rem;
+    }
+
+    h2, span {
+        position: relative;
+        font-size: clamp(3rem, 9vw, 5rem);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        line-height: 0.95;
+        color: var(--color-bg-light);
+        transform: skewX(-6deg);
+        margin-bottom: 2.2rem;
+        -webkit-text-stroke: 2px var(--color-text-dark);
+        text-shadow:
+            0px 2px 0px var(--color-orchid),
+            -2px 4px 0px var(--color-orchid),
+            -4px 6px 0px var(--color-orchid),
+            -6px 8px 0px var(--color-orchid),
+            -8px 10px 0px var(--color-navy);
+    }
+
+    span {
+        font-weight: 900;
+    }
+
+    p {
+        color: var(--color-bg-light);
+        font-weight: 600;
+    }
+}
+
+/* ==========================================================================
+   1. CÓMO FUNCIONA (EL PROCESO EN 3 PASOS)
+   ========================================================================== */
+
+.principal-steps-section {
+    width: 100%;
+    padding: 6rem 2rem;
+    background-color: var(--color-navy);
+    background-image:
+        linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 10%, transparent) 1px, transparent 1px),
+        linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender) 10%, transparent) 1px, transparent 1px),
+        linear-gradient(180deg, var(--color-text-dark) 0%, var(--color-navy) 100%);
+    background-size: 48px 48px, 48px 48px, 100% 100%;
+}
+
+.principal-steps-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.principal-step-card {
+    position: relative;
+    background-color: color-mix(in srgb, var(--color-text-dark) 85%, var(--color-navy));
+    border: 2px solid color-mix(in srgb, var(--color-lavender) 35%, transparent);
+    padding: 2.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+    transition: transform 0.25s ease, border-color 0.25s ease;
+
+    &:hover {
+        transform: translateY(-6px);
+        border-color: var(--color-turquoise);
+    }
+
+    .step-card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid color-mix(in srgb, var(--color-lavender) 25%, transparent);
+        padding-bottom: 1rem;
+    }
+
+    /* Numeración con la misma tipografía y sombra rosa del Hero / Sobre Nosotros */
+    .step-number {
+        font-size: 4.2rem;
+        font-weight: 900;
+        line-height: 0.85;
+        color: var(--color-bg-light);
+        transform: skewX(-6deg);
+        text-shadow:
+            3px 3px 0px var(--color-orchid),
+            6px 6px 0px var(--color-navy);
+    }
+
+    /* Mismo código de barras de "Sobre nosotros" como etiqueta de cada paso */
+    .step-barcode {
+        width: 72px;
+        height: 24px;
+        background: repeating-linear-gradient(
+            90deg,
+            var(--color-turquoise) 0px,
+            var(--color-turquoise) 3px,
+            transparent 3px,
+            transparent 6px,
+            var(--color-bg-light) 6px,
+            var(--color-bg-light) 7px,
+            transparent 7px,
+            transparent 11px,
+            var(--color-bg-light) 11px,
+            var(--color-bg-light) 15px,
+            transparent 15px,
+            transparent 18px
+        );
+        opacity: 0.85;
+    }
+
+    h3 {
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        color: var(--color-turquoise);
+        letter-spacing: 0.02em;
+        margin-top: 0.25rem;
+    }
+
+    p {
+        color: var(--color-bg-light);
+        font-size: 1rem;
+        line-height: 1.6;
+
+        strong {
+            color: var(--color-orchid);
+            font-weight: 800;
+        }
+    }
+}
+
+.step-icon-placeholder {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-turquoise);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+}
+
+/* ==========================================================================
+   2. PREVIEW INTERACTIVO DEL CUSTOMIZADOR
+   ========================================================================== */
+
+.principal-customizer-section {
+    width: 100%;
+    padding: 6.5rem 2rem;
+    background-color: var(--color-text-dark);
+    background-image:
+        radial-gradient(
+            circle at 50% 50%,
+            color-mix(in srgb, var(--color-orchid) 22%, transparent) 0%,
+            transparent 60%
+        ),
+        url("/rizos.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.principal-customizer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.customizer-interactive-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr 320px;
+    gap: 2rem;
+    align-items: center;
+}
+
+.customizer-panel {
+    background-color: color-mix(in srgb, var(--color-navy) 75%, var(--color-text-dark));
+    border: 1px solid color-mix(in srgb, var(--color-lavender) 35%, transparent);
+    padding: 1.75rem;
+
+    h4 {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        color: var(--color-bg-light);
+        margin-bottom: 1.25rem;
+        border-left: 4px solid var(--color-turquoise);
+        padding-left: 0.65rem;
+    }
+}
+
+.customizer-color-list,
+.customizer-print-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.color-swatch-btn,
+.print-selector-btn {
+    width: 100%;
+    background-color: var(--color-text-dark);
+    border: 2px solid color-mix(in srgb, var(--color-lavender) 30%, transparent);
+    padding: 0.85rem 1rem;
+    color: var(--color-bg-light);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+
+    &:hover {
+        border-color: var(--color-orchid);
+    }
+
+    &.active {
+        border-color: var(--color-turquoise);
+        background-color: color-mix(in srgb, var(--color-turquoise) 14%, var(--color-text-dark));
+        box-shadow: 4px 4px 0px var(--color-orchid);
+    }
+}
+
+.color-swatch-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+
+    .color-circle {
+        width: 26px;
+        height: 26px;
+        border: 2px solid var(--color-bg-light);
+        flex-shrink: 0;
+    }
+
+    .color-name {
+        color: var(--color-bg-light);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 0.05em;
+    }
+}
+
+.print-selector-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    strong {
+        color: var(--color-turquoise);
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        letter-spacing: 0.04em;
+    }
+
+    span {
+        color: color-mix(in srgb, var(--color-bg-light) 80%, var(--color-lavender));
+        font-size: 0.82rem;
+    }
+}
+
+.customizer-stage {
+    display: flex;
+    justify-content: center;
+}
+
+.customizer-mockup-box {
+    width: 100%;
+    max-width: 520px;
+    min-height: 440px;
+    background-color: var(--color-navy);
+    border: 3px solid var(--color-turquoise);
+    box-shadow: 10px 10px 0px var(--color-orchid);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: background-color 0.35s ease;
+}
+
+.mockup-badge {
+    display: inline-flex;
+    gap: 0.5rem;
+    background-color: var(--color-text-dark);
+    padding: 0.35rem 0.75rem;
+    width: fit-content;
+    border-left: 3px solid var(--color-orchid);
+
+    span {
+        color: var(--color-bg-light);
+        font-size: 0.78rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+}
+
+.mockup-garment-area {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+    border: 1px dashed color-mix(in srgb, var(--color-lavender) 50%, transparent);
+    padding: 2rem;
+}
+
+.mockup-shirt-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--color);
+    
+    /* Si tu imagen es PNG transparente, esto recorta el fondo a su silueta exacta */
+    -webkit-mask: url("/shirt.png") no-repeat center / contain;
+    mask: url("/shirt.png") no-repeat center / contain;
+    img {
+        display: block;
+        mix-blend-mode: multiply;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.mockup-print-area {
+    position: absolute;
+    transform: translateY(-20%);
+    width: clamp(80px, 20vw, 100px);
+    height: clamp(80px, 20vw, 100px);
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+.print-glitch-dark, .print-glitch-lavender, .print-origin-dark, .print-origin-lavender {
+    filter: invert(1);
+}
+.print-minimal-light {
+    filter: invert(1);
+}
+
+.customizer-cta-wrapper {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.principal-button-studio {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    justify-content: center;
+    padding: 1.1rem 2.4rem;
+    background-color: var(--color-turquoise);
+    color: var(--color-text-dark);
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    cursor: pointer;
+    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+    filter: drop-shadow(6px 6px 0 var(--color-orchid));
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        transform: translate(-2px, -2px);
+        background-color: var(--color-bg-light);
+    }
+}
+
+/* ==========================================================================
+   3. DROPS DESTACADOS / CATÁLOGO BASE
+   ========================================================================== */
+
+.principal-drops-section {
+    width: 100%;
+    padding: 6.5rem 2rem;
+    background-color: var(--color-navy);
+}
+
+.principal-drops-container {
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.principal-drops-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.75rem;
+}
+
+.drop-card {
+    background-color: var(--color-text-dark);
+    border: 2px solid color-mix(in srgb, var(--color-lavender) 28%, transparent);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+    flex: 0 1 calc(25% - 1.75rem);
+    min-width: 260px;
+
+    &:hover {
+        transform: translateY(-6px);
+        border-color: var(--color-orchid);
+    }
+}
+
+.drop-card-image {
+    position: relative;
+    height: 330px;
+    background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-text-dark) 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid var(--color-turquoise);
+}
+
+.drop-tags-container {
+    position: absolute;
+    top: 0.85rem;
+    left: 0.85rem;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.drop-cyan-tag {
+    background-color: var(--color-turquoise);
+    color: var(--color-text-dark);
+    font-size: 0.72rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.2rem 0.55rem;
+}
+
+.drop-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.drop-card-info {
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 0.35rem;
+
+    .drop-category {
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--color-lavender);
+        font-weight: 700;
+    }
+
+    h3 {
+        font-size: 1.65rem;
+        color: var(--color-bg-light);
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+    }
+}
+
+.drop-card-footer {
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .drop-price {
+        font-size: 1.9rem;
+        color: var(--color-turquoise);
+        letter-spacing: 0.03em;
+    }
+
+    .drop-add-btn {
+        background-color: var(--color-orchid);
+        color: var(--color-bg-light);
+        border: none;
+        padding: 0.55rem 1.1rem;
+        font-size: 0.8rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: var(--color-turquoise);
+            color: var(--color-text-dark);
+        }
+    }
+}
+
+/* ==========================================================================
+   4. COMUNIDAD / LOOKBOOK ("#TúEresElOrigen") - BENTO GRID
+   ========================================================================== */
+
+.principal-lookbook-section {
+    width: 100%;
+    padding: 6.5rem 2rem;
+    background-color: var(--color-text-dark);
+}
+
+.principal-lookbook-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    .principal-section-header {
+        h2 {
+            font-size: clamp(1.8rem, 9vw, 5rem);
+        }
+    }
+}
+
+.lookbook-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 1.25rem;
+}
+
+.lookbook-bento-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-navy);
+    border: 2px solid color-mix(in srgb, var(--color-lavender) 30%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.bento-featured {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    &.bento-wide {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    &.bento-standard {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .lookbook-img-placeholder {
+        padding: 1.5rem;
+        text-align: center;
+
+        span {
+            color: var(--color-lavender);
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.08em;
+        }
+    }
+
+    .lookbook-hover-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            transparent 20%,
+            color-mix(in srgb, var(--color-text-dark) 92%, transparent) 100%
+        );
+        display: flex;
+        align-items: flex-end;
+        padding: 1.5rem;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    &:hover {
+        border-color: var(--color-turquoise);
+
+        .lookbook-hover-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .lookbook-overlay-content {
+        border-left: 4px solid var(--color-orchid);
+        padding-left: 0.75rem;
+
+        .lookbook-piece-name {
+            display: block;
+            font-family: 'Heading Now', sans-serif;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            color: var(--color-turquoise);
+            letter-spacing: 0.03em;
+        }
+
+        .lookbook-creator {
+            color: var(--color-bg-light);
+            font-size: 0.9rem;
+
+            strong {
+                color: var(--color-orchid);
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+   5. BANNER DE CIERRE (CTA FINAL CON FRANJAS DIAGONALES DEL HERO)
+   ========================================================================== */
+
+.principal-final-cta {
+    width: 100%;
+    padding: 6.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    background-image:
+        linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 12%, transparent) 1px, transparent 1px),
+        linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender) 12%, transparent) 1px, transparent 1px),
+        /* Mismo corte diagonal en turquesa y orquídea del Hero */
+        linear-gradient(
+            160deg,
+            transparent 58%,
+            var(--color-turquoise) 58%,
+            var(--color-turquoise) 59%,
+            color-mix(in srgb, var(--color-orchid) 85%, var(--color-navy)) 59%,
+            color-mix(in srgb, var(--color-lavender) 90%, var(--color-text-dark)) 100%
+        ),
+        linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--color-text-dark) 92%, transparent) 0%,
+            color-mix(in srgb, var(--color-navy) 95%, transparent) 100%
+        ),
+        url("/rizos.svg");
+    background-size: 48px 48px, 48px 48px, 100% 100%, 100% 100%, cover;
+    background-position: center;
+}
+
+.principal-final-cta-container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .final-cta-barcode {
+        width: 84px;
+        height: 26px;
+        margin-bottom: 1.25rem;
+        background: repeating-linear-gradient(
+            90deg,
+            var(--color-bg-light) 0px,
+            var(--color-bg-light) 3px,
+            transparent 3px,
+            transparent 6px,
+            var(--color-bg-light) 6px,
+            var(--color-bg-light) 7px,
+            transparent 7px,
+            transparent 11px,
+            var(--color-bg-light) 11px,
+            var(--color-bg-light) 15px,
+            transparent 15px,
+            transparent 18px
+        );
+    }
+
+    h2 {
+        font-family: 'Heading Now', sans-serif;
+        font-size: clamp(2.8rem, 8vw, 5.8rem);
+        text-transform: uppercase;
+        color: var(--color-bg-light);
+        line-height: 0.95;
+        transform: skewX(-6deg);
+        margin-bottom: 1.25rem;
+        text-shadow:
+            4px 4px 0px var(--color-orchid),
+            8px 8px 0px var(--color-text-dark);
+
+        span {
+            font-family: 'Heading Now', sans-serif;
+            color: var(--color-turquoise);
+        }
+    }
+
+    p {
+        max-width: 580px;
+        color: var(--color-bg-light);
+        font-size: 1.15rem;
+        margin-bottom: 2rem;
+    }
+
+    .final-cta-buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        button {
+            padding: 0.9rem 1.8rem;
+            border: none;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            cursor: pointer;
+            clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+            filter: drop-shadow(4px 4px 0 var(--color-text-dark));
+        }
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVE DE LOS NUEVOS APARTADOS
+   ========================================================================== */
+
+@media (max-width: 1100px) {
+    .principal-steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .customizer-interactive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .principal-drops-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lookbook-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .principal-drops-grid,
+    .lookbook-bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lookbook-bento-item.bento-featured,
+    .lookbook-bento-item.bento-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
