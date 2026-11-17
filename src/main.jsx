@@ -8,6 +8,7 @@ const root = document.getElementById('root')
 import { Principal } from './routes/principal'
 // Componentes
 import { Menu } from "./components/menu.jsx"
+import { Footer } from "./components/footer.jsx"
 
 function App() {
   let app = <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Principal />} />
     </Routes>
+    <Footer />
   </BrowserRouter>
 
   return app

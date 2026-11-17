@@ -99,7 +99,7 @@ export function Principal() {
     const [estampadoActivo, setEstampadoActivo] = useState(ESTAMPADOS_MUESTRA[0])
 
     let princ = <>
-    <section className="principal-header">
+    <section id="encabezado" className="principal-header">
         <div className="principal-header-container">
             <div className="principal-left-container">
                 <div className="principal-text-container">
@@ -143,7 +143,7 @@ export function Principal() {
         </div>
     </section>
 
-    <section className="principal-for-we">
+    <section id="nosotros" className="principal-for-we">
         <h2>Sobre nosotros</h2>
         <h3>En un mundo lleno de copias, <span>tú eres el origen.</span></h3>
         <p>Vivimos rodeados de producción masiva, donde la industria dicta cómo vestir, cómo lucir y cómo encajar. Nos empujan a usar el mismo molde y a llevar exactamente lo mismo que miles de personas más. Pero la realidad es simple: nadie es igual a otro. <strong>Así nació One.</strong></p>
@@ -212,7 +212,7 @@ export function Principal() {
     </section>
 
     {/* 2. PREVIEW INTERACTIVO DEL CUSTOMIZADOR */}
-    <section className="principal-customizer-section">
+    <section id="vista" className="principal-customizer-section">
         <div className="principal-customizer-container">
             <div className="principal-section-header">
                 <p className="principal-section-tag">Prueba en tiempo real</p>
@@ -295,7 +295,7 @@ export function Principal() {
     </section>
 
     {/* 3. DROPS DESTACADOS / CATÁLOGO BASE */}
-    <section className="principal-drops-section">
+    <section id="productos" className="principal-drops-section">
         <div className="principal-drops-container">
             <div className="principal-section-header">
                 <p className="principal-section-tag">Listos para llevar o intervenir</p>
@@ -340,7 +340,7 @@ export function Principal() {
     </section>
 
     {/* 4. COMUNIDAD / LOOKBOOK ("#TúEresElOrigen") */}
-    <section className="principal-lookbook-section">
+    <section id="comunidad" className="principal-lookbook-section">
         <div className="principal-lookbook-container">
             <div className="principal-section-header">
                 <p className="principal-section-tag">Comunidad One</p>

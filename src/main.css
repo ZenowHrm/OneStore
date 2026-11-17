@@ -11,6 +11,10 @@
     --color-text-muted: #5e5a80;  /* Gris azulado para textos secundarios */
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin: 0;
