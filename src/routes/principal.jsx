@@ -1,6 +1,9 @@
 import { useState } from "react"
 import "../css/principal.css"
 
+// Componentes
+import { DROPS_DESTACADOS } from "../JSON/drops"
+
 const COLORES_TELA = [
     { id: "dark", nombre: "Negro Abismo", hex: "#1e1a3e" },
     { id: "light", nombre: "Blanco Crudo", hex: "#f5f4f8" },
@@ -28,69 +31,34 @@ const ESTAMPADOS_MUESTRA = [
     }
 ]
 
-const DROPS_DESTACADOS = [
-    {
-        id: 1,
-        nombre: "Oversized Tee 'Kong'",
-        categoria: "Heavyweight Graphic Tee",
-        precio: "$35.00",
-        etiquetas: ["EDICIÓN LIMITADA", "100% ALGODÓN"],
-        sugerenciaImg: "/prendas/negra.jpg"
-    },
-    {
-        id: 2,
-        nombre: "Oversized Tee 'Spider-Man'",
-        categoria: "280 GSM / Comic Back Print",
-        precio: "$65.00",
-        etiquetas: ["PERSONALIZABLE", "100% ALGODÓN"],
-        sugerenciaImg: "/prendas/blanca.jpg"
-    },
-    {
-        id: 3,
-        nombre: "Hoodie 'Futttura Print'",
-        categoria: "450 GSM French Terry",
-        precio: "$58.00",
-        etiquetas: ["EDICIÓN LIMITADA", "PERSONALIZABLE"],
-        sugerenciaImg: "/prendas/chaqueta.jpg"
-    },
-    {
-        id: 4,
-        nombre: "Graphic Tee 'Death'",
-        categoria: "280 GSM / Serigrafía Frontal",
-        precio: "$28.00",
-        etiquetas: ["PERSONALIZABLE", "100% ALGODÓN"],
-        sugerenciaImg: "/prendas/calavera.webp"
-    }
-];
-
 const LOOKBOOK_ITEMS = [
     {
         id: 1,
         tamano: "bento-featured",
         diseno: "Hoodie 'Neo-Tokyo Riot'",
         usuario: "@kael.vzn (Instagram)",
-        sugerenciaImg: "Foto formato vertical/cuadrado grande: plano completo en calle nocturna con luces de neón y hoodie intervenido"
+        sugerenciaImg: "/prendas/LOOK_BOOK/hoodieIntervenido.webp"
     },
     {
         id: 2,
         tamano: "bento-wide",
         diseno: "Oversized Tee 'Acid Drop'",
         usuario: "@valeria.raw (TikTok)",
-        sugerenciaImg: "Foto formato horizontal: dos personas en un skatepark o estacionamiento mostrando el estampado de espalda"
+        sugerenciaImg: "/prendas/LOOK_BOOK/skatepark.webp"
     },
     {
         id: 3,
         tamano: "bento-standard",
         diseno: "Cargo 'System Error'",
         usuario: "@diego_stwt (Instagram)",
-        sugerenciaImg: "Foto cuadrada: detalle de cerca del outfit urbano con accesorios metálicos y serigrafía en el bolsillo"
+        sugerenciaImg: "/prendas/LOOK_BOOK/bolsillo.webp"
     },
     {
         id: 4,
         tamano: "bento-standard",
         diseno: "Tee 'Zero Mold'",
         usuario: "@mika.ink (TikTok)",
-        sugerenciaImg: "Foto cuadrada: retrato urbano con flash directo estilo cámara analógica de los 90s"
+        sugerenciaImg: "/prendas/LOOK_BOOK/analogo.webp"
     }
 ]
 
@@ -311,7 +279,6 @@ export function Principal() {
                                     <span key={tag} className="drop-cyan-tag">{tag}</span>
                                 ))}
                             </div>
-                            {/* IMAGEN SUGERIDA: {producto.sugerenciaImg} */}
                             <div className="drop-img-placeholder">
                                 <img src={producto?.sugerenciaImg} alt="" />
                             </div>
@@ -351,9 +318,8 @@ export function Principal() {
             <div className="lookbook-bento-grid">
                 {LOOKBOOK_ITEMS.map((item) => (
                     <article key={item.id} className={`lookbook-bento-item ${item.tamano}`}>
-                        {/* IMAGEN SUGERIDA: {item.sugerenciaImg} */}
                         <div className="lookbook-img-placeholder">
-                            <span>[ Street Style: {item.diseno} ]</span>
+                            <img src={`${item.sugerenciaImg}`} alt="" />
                         </div>
 
                         <div className="lookbook-hover-overlay">

@@ -1041,15 +1041,15 @@
     }
 
     .lookbook-img-placeholder {
-        padding: 1.5rem;
-        text-align: center;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
 
-        span {
-            color: var(--color-lavender);
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 0.85rem;
-            letter-spacing: 0.08em;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
     }
 
