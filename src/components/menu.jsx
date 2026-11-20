@@ -1,5 +1,4 @@
 import "../css/menu.css"
-import { useState } from "react"
 import { Link } from "react-router"
 
 export function Menu() {
@@ -21,7 +20,7 @@ export function Menu() {
         <label htmlFor="menu-toggle" className="mobile-background" />
         <ul className="nav-items-constainer">
             <li>
-                <Link to={"#"}>Inicio</Link>
+                <Link to="/#encabezado">Inicio</Link>
             </li>
             <li>
                 <Link to={"#"}>Catalogo</Link>
