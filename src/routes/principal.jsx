@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useNavigate } from "react-router"
 import "../css/principal.css"
 
 // Componentes
@@ -63,6 +64,7 @@ const LOOKBOOK_ITEMS = [
 ]
 
 export function Principal() {
+    const navigate = useNavigate()
     const [colorActivo, setColorActivo] = useState(COLORES_TELA[0])
     const [estampadoActivo, setEstampadoActivo] = useState(ESTAMPADOS_MUESTRA[0])
 
@@ -350,7 +352,11 @@ export function Principal() {
                     Ir al customizador
                     {/* ICONO SUGERIDO: Icono de flecha derecha (ej. icon-tabler-arrow-narrow-right) */}
                 </button>
-                <button type="button" className="principal-button-contact">
+                <button 
+                    type="button" 
+                    className="principal-button-contact"
+                    onClick={() => navigate('/catalogo')}
+                >
                     Explorar catálogo
                     {/* ICONO SUGERIDO: Icono de cuadrícula o tienda (ej. icon-tabler-layout-grid) */}
                 </button>

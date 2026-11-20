@@ -46,6 +46,7 @@ export function Footer() {
                 <h4>Explorar</h4>
                 <ul>
                     <li><Link to="/#encabezado">Inicio</Link></li>
+                    <li><Link to="/catalogo">Catálogo completo</Link></li>
                     <li><Link to="/#vista">Customizar pieza</Link></li>
                     <li><Link to="/#productos">Drops destacados</Link></li>
                     <li><Link to="/#comunidad">#TúEresElOrigen</Link></li>

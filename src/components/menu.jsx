@@ -13,17 +13,17 @@ export function Menu() {
                     <path d="M4 18l16 0" />
                 </svg>
             </label>
-            <div className="img-container-menu">
-                <img src="/logo2.svg" alt="" />
-            </div>
+            <Link to="/" className="img-container-menu">
+                <img src="/logo2.svg" alt="Logo One Store" />
+            </Link>
         </div>
         <label htmlFor="menu-toggle" className="mobile-background" />
         <ul className="nav-items-constainer">
             <li>
-                <Link to="/#encabezado">Inicio</Link>
+                <Link to="/#encabezado" onClick={() => { const t = document.getElementById("menu-toggle"); if (t) t.checked = false }}>Inicio</Link>
             </li>
             <li>
-                <Link to={"#"}>Catalogo</Link>
+                <Link to="/catalogo" onClick={() => { const t = document.getElementById("menu-toggle"); if (t) t.checked = false }}>Catalogo</Link>
             </li>
             <li>
                 <Link to={"#"}>Contacto</Link>
