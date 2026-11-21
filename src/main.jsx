@@ -37,7 +37,6 @@ function App() {
     <Routes>
       <Route path='/' element={<Principal />} />
       <Route path='/catalogo' element={<Catalogo />} />
-      <Route path='/catalog' element={<Catalogo />} />
     </Routes>
     <Footer />
   </BrowserRouter>

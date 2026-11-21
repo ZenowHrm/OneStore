@@ -1,6 +1,6 @@
+import "../css/catalogo.css"
 import { useState, useMemo } from "react"
 import { Link } from "react-router"
-import "../css/catalogo.css"
 
 // Datos desde JSON
 import { CATALOGO } from "../JSON/drops"
@@ -81,7 +81,6 @@ export function Catalogo() {
                     </div>
 
                     <div className="catalogo-header-badge">
-                        <div className="barcode-deco" aria-hidden="true"></div>
                         <div className="badge-text">
                             <span className="badge-count">{CATALOGO.length}</span>
                             <span className="badge-label">Diseños Disponibles</span>
@@ -203,16 +202,10 @@ export function Catalogo() {
                                     <div className="catalogo-card-info">
                                         <div className="catalogo-card-top-meta">
                                             <span className="card-category">{producto.categoria}</span>
-                                            <span className="card-sku">#ONE-{String(producto.id).padStart(3, '0')}</span>
+                                            <span className="card-sku">{String(producto.id).padStart(2, '0')}</span>
                                         </div>
 
                                         <h3 className="card-title">{producto.nombre}</h3>
-
-                                        {!hasRealImage && (
-                                            <p className="card-description-hint" title={producto.sugerenciaImg}>
-                                                {producto.sugerenciaImg}
-                                            </p>
-                                        )}
 
                                         <div className="catalogo-card-footer">
                                             <div className="card-price-container">

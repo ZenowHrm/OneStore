@@ -350,7 +350,6 @@ export function Principal() {
             <div className="final-cta-buttons">
                 <button type="button" className="principal-button-custom">
                     Ir al customizador
-                    {/* ICONO SUGERIDO: Icono de flecha derecha (ej. icon-tabler-arrow-narrow-right) */}
                 </button>
                 <button 
                     type="button" 
@@ -358,7 +357,6 @@ export function Principal() {
                     onClick={() => navigate('/catalogo')}
                 >
                     Explorar catálogo
-                    {/* ICONO SUGERIDO: Icono de cuadrícula o tienda (ej. icon-tabler-layout-grid) */}
                 </button>
             </div>
         </div>

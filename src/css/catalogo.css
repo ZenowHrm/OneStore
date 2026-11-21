@@ -125,32 +125,11 @@
     padding: 0.85rem 1.4rem;
     clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
 
-    .barcode-deco {
-        width: 55px;
-        height: 28px;
-        background: repeating-linear-gradient(
-            90deg,
-            var(--color-turquoise) 0px,
-            var(--color-turquoise) 3px,
-            transparent 3px,
-            transparent 5px,
-            var(--color-bg-light) 5px,
-            var(--color-bg-light) 7px,
-            transparent 7px,
-            transparent 10px,
-            var(--color-orchid) 10px,
-            var(--color-orchid) 13px,
-            transparent 13px,
-            transparent 16px
-        );
-    }
-
     .badge-text {
         display: flex;
         flex-direction: column;
 
         .badge-count {
-            font-family: 'Heading Now', sans-serif;
             font-size: 1.6rem;
             color: var(--color-turquoise);
             line-height: 1;
@@ -309,11 +288,13 @@
     align-items: center;
     margin-bottom: 1.5rem;
     font-size: 0.85rem;
-    color: var(--color-lavender);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
 
+    p {
+        color: var(--color-bg-light);
+    }
     span.highlight {
         color: var(--color-turquoise);
     }
@@ -533,7 +514,7 @@
         color: color-mix(in srgb, var(--color-bg-light) 75%, transparent);
         line-height: 1.45;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         margin-bottom: 0.5rem;
@@ -542,11 +523,12 @@
 
 .catalogo-card-footer {
     margin-top: auto;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     border-top: 1px dashed color-mix(in srgb, var(--color-lavender) 25%, transparent);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: column;
 
     .card-price-container {
         display: flex;
@@ -561,7 +543,6 @@
         }
 
         .card-price {
-            font-family: 'Heading Now', sans-serif;
             font-size: 1.85rem;
             color: var(--color-turquoise);
             line-height: 1;
@@ -573,6 +554,7 @@
         display: flex;
         gap: 0.5rem;
         align-items: center;
+        justify-content: space-between;
     }
 
     .btn-customize {
@@ -774,7 +756,7 @@
 
     .catalogo-products-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 1.25rem;
+        gap: 1rem;
     }
 
     .catalogo-cta-inner {
