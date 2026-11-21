@@ -26,7 +26,7 @@ export function Menu() {
                 <Link to="/catalogo" onClick={() => { const t = document.getElementById("menu-toggle"); if (t) t.checked = false }}>Catalogo</Link>
             </li>
             <li>
-                <Link to={"#"}>Contacto</Link>
+                <Link to="/contacto" onClick={() => { const t = document.getElementById("menu-toggle"); if (t) t.checked = false }}>Contacto</Link>
             </li>
             <li>
                 <Link to={"#"}>Soporte</Link>

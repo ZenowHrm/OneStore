@@ -60,7 +60,7 @@ export function Footer() {
                     <li><Link to="#">Guía de tallas</Link></li>
                     <li><Link to="#">Producción y envíos</Link></li>
                     <li><Link to="#">Preguntas frecuentes</Link></li>
-                    <li><Link to="#">Contáctanos</Link></li>
+                    <li><Link to="/contacto">Contáctanos</Link></li>
                 </ul>
             </nav>
 
