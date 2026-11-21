@@ -89,7 +89,11 @@ export function Principal() {
                             <path d="M15 8l4 4" />
                         </svg>
                     </button>
-                    <button className="principal-button-contact">
+                    <button 
+                        type="button" 
+                        className="principal-button-contact"
+                        onClick={() => navigate('/contacto')}
+                    >
                         Contáctanos
                     </button>
                 </div>
