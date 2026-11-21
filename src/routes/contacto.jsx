@@ -3,9 +3,24 @@ import "../css/contacto.css"
 
 const STAFF_MEMBERS = [
     {
+        id: 5,
+        nombre: "Luisa",
+        rol: "Director de Arte",
+        imagen: "/staff/luisana.jpg",
+        intro: null,
+        bullets: [
+            "L",
+            "U",
+            "I",
+            "S",
+            "A",
+            "la buena"
+        ]
+    },
+    {
         id: 1,
         nombre: "Susej",
-        rol: "Diseño Gráfico",
+        rol: "Redactor Creativo",
         imagen: "/staff/susej.jpg",
         intro: "Soy Susej de el área de Diseño Gráfico, Te puedo dar orientación sobre tu diseño y estilo.",
         bullets: [
@@ -17,8 +32,8 @@ const STAFF_MEMBERS = [
     {
         id: 2,
         nombre: "Ricardo",
-        rol: "Staff",
-        imagen: "/staff/ricardo.jpg",
+        rol: "Project Manager",
+        imagen: "/staff/jesus.webp",
         intro: null,
         bullets: [
             "yo",
@@ -30,8 +45,8 @@ const STAFF_MEMBERS = [
     {
         id: 3,
         nombre: "Jesús",
-        rol: "Producción & Taller",
-        imagen: "/staff/jesus.webp",
+        rol: "Ejecutivo",
+        imagen: "/staff/ricardo.jpg",
         intro: null,
         bullets: [
             "apoyo las marchas feministas para protestar por los derechos de las mujeres (soy un incomprendido)",
@@ -43,28 +58,13 @@ const STAFF_MEMBERS = [
     {
         id: 4,
         nombre: "Mariangel",
-        rol: "Dirección General",
+        rol: "Director Creativo",
         imagen: "/staff/mariangel.jpg",
         intro: null,
         bullets: [
             "Dictadora de la empresa, no hay aumentos de sueldo pero si aumentos de explotación laboral.",
             "No hay horario para comer, come en tu casa antes de salir.",
             "El morado es el color de la nueva dictadura."
-        ]
-    },
-    {
-        id: 5,
-        nombre: "Luisa",
-        rol: "Control de Calidad",
-        imagen: "/staff/luisana.jpg",
-        intro: null,
-        bullets: [
-            "L",
-            "U",
-            "I",
-            "S",
-            "A",
-            "la buena"
         ]
     }
 ]
@@ -89,17 +89,6 @@ export function Contacto() {
                         <p className="contacto-subtitle">
                             Sin rodeos ni intermediarios. Conéctate con nosotros para cotizaciones especiales, dudas sobre personalización o asistencia con tus pedidos.
                         </p>
-                    </div>
-
-                    <div className="contacto-header-badge">
-                        <div className="barcode-deco" aria-hidden="true"></div>
-                        <div className="badge-text">
-                            <span className="badge-status">
-                                <span className="status-dot"></span>
-                                CCS / VNZ
-                            </span>
-                            <span className="badge-label">Operaciones Activas</span>
-                        </div>
                     </div>
                 </div>
             </header>
@@ -142,7 +131,7 @@ export function Contacto() {
                             </div>
                         </div>
                         <h3>WhatsApp Oficial</h3>
-                        <p className="contacto-card-detail">+58 (412) ONE-SHOP</p>
+                        <p className="contacto-card-detail">+58 (412) XXX XX67</p>
                         <p>
                             Chatea en vivo con nuestro equipo de atención para confirmar tallas, pagos móviles o coordinar drops.
                         </p>
@@ -242,7 +231,6 @@ export function Contacto() {
                                         <div className="staff-card-tags">
                                             <span className="staff-role-tag">{miembro.rol}</span>
                                         </div>
-                                        <span className="staff-card-number">0{miembro.id}</span>
                                         <div className="staff-img-wrapper">
                                             <img
                                                 src={miembro.imagen}
@@ -255,7 +243,6 @@ export function Contacto() {
                                     <div className="staff-card-info">
                                         <div className="staff-card-header">
                                             <h3>{miembro.nombre}</h3>
-                                            <span className="staff-subtag">One Team</span>
                                         </div>
 
                                         <div className="staff-text-content">
@@ -268,11 +255,6 @@ export function Contacto() {
                                                     <li key={index}>{bullet}</li>
                                                 ))}
                                             </ul>
-                                        </div>
-
-                                        <div className="staff-card-footer">
-                                            <div className="staff-barcode" aria-hidden="true"></div>
-                                            <span className="staff-dept">One Store Dept.</span>
                                         </div>
                                     </div>
                                 </article>
