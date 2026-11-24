@@ -29,7 +29,7 @@ export function Menu() {
                 <Link to="/contacto" onClick={() => { const t = document.getElementById("menu-toggle"); if (t) t.checked = false }}>Contacto</Link>
             </li>
             <li>
-                <Link to={"#"}>Soporte</Link>
+                <Link to="/soporte" onClick={() => { const t = document.getElementById("menu-toggle"); if (t) t.checked = false }}>Soporte</Link>
             </li>
         </ul>
         <div className="nav-button-container">

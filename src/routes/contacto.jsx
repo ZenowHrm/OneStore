@@ -66,6 +66,19 @@ const STAFF_MEMBERS = [
             "No hay horario para comer, come en tu casa antes de salir.",
             "El morado es el color de la nueva dictadura."
         ]
+    },
+    {
+        id: 5,
+        nombre: "Raychel",
+        rol: "Inversionista",
+        imagen: "/staff/Raychel.jpg",
+        intro: null,
+        bullets: [
+            "me gusta llevar la contraria, no, no tienes razon si tu argumento es igual de ridiculo, depnde de que tipo de persona seas quizas QUIZAS me caerias bien",
+            "estres? yo? para nada ( me desmayo )",
+            "No me traigas preguntas estupidas",
+            "me encanta hacer dulce y hacer sentir bien a los demas"
+        ]
     }
 ]
 

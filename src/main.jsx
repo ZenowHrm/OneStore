@@ -10,6 +10,7 @@ const root = document.getElementById('root')
 import { Principal } from './routes/principal'
 import { Catalogo } from './routes/catalogo'
 import { Contacto } from './routes/contacto'
+import { Promo } from "./routes/promo.jsx"
 // Componentes
 import { Menu } from "./components/menu.jsx"
 import { Footer } from "./components/footer.jsx"
@@ -39,6 +40,7 @@ function App() {
       <Route path='/' element={<Principal />} />
       <Route path='/catalogo' element={<Catalogo />} />
       <Route path='/contacto' element={<Contacto />} />
+      <Route path="/soporte" element={<Promo />} />
     </Routes>
     <Footer />
   </BrowserRouter>
