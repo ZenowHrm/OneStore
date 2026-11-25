@@ -117,12 +117,12 @@
     .mobile-background {
         display: block;
         position: fixed;
-        inset: 0; /* Equivale a top:0, left:0, width:100%, height:100% */
+        inset: 0; 
         background-color: color-mix(in srgb, var(--color-text-dark) 40%, transparent);
-        backdrop-filter: blur(2px); /* Opcional: desenfoca un poco el fondo */
+        backdrop-filter: blur(2px); 
         z-index: 1000;
         opacity: 0;
-        pointer-events: none; /* No bloquea clics cuando está oculto */
+        pointer-events: none; 
         transition: opacity 0.3s ease;
     }
 

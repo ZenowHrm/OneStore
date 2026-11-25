@@ -16,7 +16,6 @@ export function Promo() {
         let h = 0;
         let stars = [];
 
-        // Cache del gradiente de las estrellas
         const canvas2 = document.createElement("canvas");
         const ctx2 = canvas2.getContext("2d");
         canvas2.width = 100;
@@ -106,7 +105,6 @@ export function Promo() {
         animate();
         window.addEventListener("resize", initCanvas);
 
-        // Limpieza al desmontar el componente
         return () => {
         window.cancelAnimationFrame(animationFrameId);
         window.removeEventListener("resize", initCanvas);

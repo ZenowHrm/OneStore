@@ -85,7 +85,6 @@ const STAFF_MEMBERS = [
 export function Contacto() {
     let cont = (
         <div className="contacto-page">
-            {/* Header / Hero de Contacto */}
             <header className="contacto-header-section">
                 <nav className="contacto-breadcrumbs" aria-label="Migas de pan">
                     <Link to="/">Inicio</Link>
@@ -106,10 +105,8 @@ export function Contacto() {
                 </div>
             </header>
 
-            {/* BLOQUE A: INFORMACIÓN DE CONTACTO */}
             <section className="contacto-info-container">
                 <div className="contacto-cards-grid">
-                    {/* Tarjeta 1: Ubicación */}
                     <article className="contacto-card">
                         <div className="contacto-card-top">
                             <span className="contacto-card-tag">Base Urbana</span>
@@ -131,7 +128,6 @@ export function Contacto() {
                         </div>
                     </article>
 
-                    {/* Tarjeta 2: Atención WhatsApp */}
                     <article className="contacto-card">
                         <div className="contacto-card-top">
                             <span className="contacto-card-tag">Canal Directo</span>
@@ -161,7 +157,6 @@ export function Contacto() {
                         </div>
                     </article>
 
-                    {/* Tarjeta 3: Redes Sociales */}
                     <article className="contacto-card">
                         <div className="contacto-card-top">
                             <span className="contacto-card-tag">Comunidad</span>
@@ -200,7 +195,6 @@ export function Contacto() {
                         </div>
                     </article>
 
-                    {/* Tarjeta 4: Horarios */}
                     <article className="contacto-card">
                         <div className="contacto-card-top">
                             <span className="contacto-card-tag">Disponibilidad</span>
@@ -223,7 +217,6 @@ export function Contacto() {
                 </div>
             </section>
 
-            {/* BLOQUE B: SECCIÓN DEL EQUIPO (STAFF) */}
             <section className="contacto-staff-section">
                 <div className="contacto-staff-container">
                     <div className="contacto-section-header">
@@ -277,7 +270,6 @@ export function Contacto() {
                 </div>
             </section>
 
-            {/* Banner Inferior CTA */}
             <aside className="contacto-cta-banner">
                 <div className="contacto-cta-inner">
                     <div className="cta-text">

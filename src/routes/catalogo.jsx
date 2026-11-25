@@ -2,7 +2,6 @@ import "../css/catalogo.css"
 import { useState, useMemo } from "react"
 import { Link } from "react-router"
 
-// Datos desde JSON
 import { CATALOGO } from "../JSON/drops"
 import { useCarrito } from "../context/carritoContext"
 
@@ -11,7 +10,6 @@ export function Catalogo() {
     const [busqueda, setBusqueda] = useState("")
     const [filtroActivo, setFiltroActivo] = useState("TODOS")
 
-    // Filtros por categoría / etiqueta
     const filtros = [
         { id: "TODOS", label: "Todas las piezas" },
         { id: "TEES", label: "Tees & Camisetas" },
@@ -20,10 +18,8 @@ export function Catalogo() {
         { id: "CUSTOM", label: "Personalizables" }
     ]
 
-    // Filtrado de productos en tiempo real
     const productosFiltrados = useMemo(() => {
         return CATALOGO.filter((producto) => {
-            // Filtro por término de búsqueda (nombre, categoría o etiquetas)
             const coincideBusqueda = 
                 producto.nombre.toLowerCase().includes(busqueda.toLowerCase()) ||
                 producto.categoria.toLowerCase().includes(busqueda.toLowerCase()) ||
@@ -31,17 +27,16 @@ export function Catalogo() {
 
             if (!coincideBusqueda) return false
 
-            // Filtro por pestañas
             if (filtroActivo === "TODOS") return true
             if (filtroActivo === "TEES") {
                 return producto.nombre.toLowerCase().includes("tee") || 
-                       producto.categoria.toLowerCase().includes("tee") ||
-                       producto.nombre.toLowerCase().includes("sleeve")
+                        producto.categoria.toLowerCase().includes("tee") ||
+                        producto.nombre.toLowerCase().includes("sleeve")
             }
             if (filtroActivo === "HOODIES") {
                 return producto.nombre.toLowerCase().includes("hoodie") || 
-                       producto.nombre.toLowerCase().includes("crewneck") || 
-                       producto.nombre.toLowerCase().includes("sweater")
+                        producto.nombre.toLowerCase().includes("crewneck") || 
+                        producto.nombre.toLowerCase().includes("sweater")
             }
             if (filtroActivo === "LIMITADA") {
                 return producto.etiquetas.includes("EDICIÓN LIMITADA")
@@ -55,7 +50,6 @@ export function Catalogo() {
 
     let cat = (
         <div className="catalogo-page">
-            {/* Header del Catálogo */}
             <header className="catalogo-header-section">
                 <nav className="catalogo-breadcrumbs" aria-label="Migas de pan">
                     <Link to="/">Inicio</Link>
@@ -83,7 +77,6 @@ export function Catalogo() {
                 </div>
             </header>
 
-            {/* Controles de Búsqueda y Filtros */}
             <section className="catalogo-controls-container">
                 <div className="catalogo-search-row">
                     <div className="catalogo-search-wrapper">
@@ -131,7 +124,6 @@ export function Catalogo() {
                 </div>
             </section>
 
-            {/* Listado de Productos */}
             <main className="catalogo-grid-container">
                 <div className="catalogo-results-summary">
                     <p>
@@ -154,7 +146,6 @@ export function Catalogo() {
 
                             return (
                                 <article key={producto.id} className="catalogo-card">
-                                    {/* Cabecera / Imagen de la tarjeta */}
                                     <div className="catalogo-card-image">
                                         <div className="catalogo-card-tags">
                                             {producto.etiquetas.map((tag, idx) => (
@@ -184,7 +175,6 @@ export function Catalogo() {
                                                 />
                                                 <span className="concept-badge">Concepto de Diseño</span>
                                                 
-                                                {/* Previsualización del concepto al pasar el cursor */}
                                                 <div className="concept-prompt-preview">
                                                     <p className="prompt-label">Dirección Creativa</p>
                                                     <p className="prompt-text">{producto.sugerenciaImg}</p>
@@ -193,7 +183,6 @@ export function Catalogo() {
                                         )}
                                     </div>
 
-                                    {/* Información del producto */}
                                     <div className="catalogo-card-info">
                                         <div className="catalogo-card-top-meta">
                                             <span className="card-category">{producto.categoria}</span>
@@ -277,7 +266,6 @@ export function Catalogo() {
                 </div>
             </main>
 
-            {/* Banner inferior de invitación a customizar */}
             <aside className="catalogo-cta-banner">
                 <div className="catalogo-cta-inner">
                     <div className="cta-text">

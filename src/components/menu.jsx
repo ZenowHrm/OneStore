@@ -4,8 +4,6 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router"
 import { useCarrito } from "../context/carritoContext"
 
-const IMAGEN_MODAL_PAGO = "https://i.pinimg.com/736x/8a/42/fa/8a42fa247e5cd990f6638146737fb43f.jpg"
-
 export function Menu() {
     const {
         carrito,
@@ -85,7 +83,6 @@ export function Menu() {
                 </label>
             </div>
 
-            {/* Truco checkbox + label reciclado para el carrito (visible en escritorio y móvil) */}
             <label htmlFor="cart-toggle" className="cart-background" aria-label="Cerrar carrito" />
 
             <aside className="cart-drawer" aria-label="Tu carrito">
@@ -235,17 +232,17 @@ export function Menu() {
                         </svg>
                     </button>
 
-                    <span className="modal-tag">Aviso // Checkout</span>
+                    <span className="modal-tag">Mensaje Importante</span>
                     <h3 id="modal-pago-titulo">
-                        Pago <span>no disponible</span> todavía
+                        Funcion <span>no disponible</span>
                     </h3>
                     <p>
-                        Esta funcionalidad no está disponible todavía. Estamos trabajando en la pasarela de pagos para que puedas completar tus pedidos muy pronto.
+                        Esta funcionalidad es pa gente con plata, tu no plata.
                     </p>
 
                     <div className="cart-modal-img-wrapper">
                         <img
-                            src={IMAGEN_MODAL_PAGO}
+                            src="https://i.pinimg.com/736x/8a/42/fa/8a42fa247e5cd990f6638146737fb43f.jpg"
                             alt="Funcionalidad no disponible todavía"
                             referrerPolicy="no-referrer"
                         />

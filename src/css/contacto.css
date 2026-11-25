@@ -1,26 +1,19 @@
-/* ==========================================================================
-SECCIÓN DE CONTACTO & STAFF - ONE STORE
-Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
-========================================================================== */
-
 .contacto-page {
     width: 100%;
     min-height: 100vh;
     background-color: var(--color-navy);
-    background-image: 
-        /* Rejilla técnica urbana */
+    background-image:
         linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 10%, transparent) 1px, transparent 1px),
         linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender) 10%, transparent) 1px, transparent 1px),
-        /* Gradiente de profundidad */
         linear-gradient(180deg, var(--color-text-dark) 0%, var(--color-navy) 40%, var(--color-text-dark) 100%);
     background-size: 48px 48px, 48px 48px, 100% 100%;
-    padding-top: 100px; /* Espacio para el navbar fijo */
+    padding-top: 100px; 
     padding-bottom: 6rem;
 }
 
 /* ==========================================================================
-   HEADER / HERO DE CONTACTO
-   ========================================================================== */
+HEADER / HERO DE CONTACTO
+========================================================================== */
 
 .contacto-header-section {
     position: relative;
@@ -117,8 +110,8 @@ Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
 }
 
 /* ==========================================================================
-   BLOQUE A: TARJETAS DE INFORMACIÓN DE CONTACTO & CANALES
-   ========================================================================== */
+BLOQUE A: TARJETAS DE INFORMACIÓN DE CONTACTO & CANALES
+========================================================================== */
 
 .contacto-info-container {
     max-width: 1350px;
@@ -235,7 +228,6 @@ Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
     }
 }
 
-/* Redes Sociales Grid Interno */
 .contacto-social-links {
     display: flex;
     flex-wrap: wrap;
@@ -264,8 +256,8 @@ Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
 }
 
 /* ==========================================================================
-   BLOQUE B: SECCIÓN DEL EQUIPO (STAFF)
-   ========================================================================== */
+BLOQUE B: SECCIÓN DEL EQUIPO (STAFF)
+========================================================================== */
 
 .contacto-staff-section {
     width: 100%;
@@ -331,7 +323,6 @@ Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
     }
 }
 
-/* Grid del Staff */
 .staff-cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -339,7 +330,6 @@ Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
     justify-content: center;
 }
 
-/* Tarjeta individual del Staff */
 .staff-card {
     background-color: var(--color-navy);
     border: 2px solid color-mix(in srgb, var(--color-lavender) 28%, transparent);
@@ -366,7 +356,6 @@ Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
     }
 }
 
-/* Imagen del Staff */
 .staff-card-image {
     position: relative;
     height: 320px;
@@ -415,7 +404,6 @@ Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
     }
 }
 
-/* Contenido de la Tarjeta */
 .staff-card-info {
     padding: 1.6rem;
     display: flex;
@@ -439,7 +427,6 @@ Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
     }
 }
 
-/* Texto del Miembro del Staff */
 .staff-text-content {
     display: flex;
     flex-direction: column;
@@ -581,10 +568,6 @@ BANNER INFERIOR CTA
         }
     }
 }
-
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
 
 @media (max-width: 768px) {
     .contacto-page {

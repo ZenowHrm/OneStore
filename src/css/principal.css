@@ -2,10 +2,8 @@
     width: 100%;
     height: 100vh;
     background-image: 
-        /* Rejilla técnica sutil estilo urbano */
         linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 12%, transparent) 1px, transparent 1px),
         linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender) 12%, transparent) 1px, transparent 1px),
-        /* Corte diagonal principal con acento neón/orquídea */
         linear-gradient(
             160deg,
             transparent 54.5%,
@@ -14,13 +12,11 @@
             color-mix(in srgb, var(--color-orchid) 85%, var(--color-navy)) 55.2%,
             color-mix(in srgb, var(--color-lavender) 90%, var(--color-text-dark)) 100%
         ),
-        /* Halos de luz para dar volumen */
         radial-gradient(
             circle at 20% 35%,
             color-mix(in srgb, var(--color-orchid) 28%, transparent) 0%,
             transparent 50%
         ),
-        /* Capa oscura principal sobre la textura de cemento */
         linear-gradient(
             180deg,
             color-mix(in srgb, var(--color-text-dark) 88%, transparent) 0%,
@@ -82,8 +78,8 @@
     h1 {
         position: relative;
         display: inline-flex;
-        align-items: center; /* Alinea verticalmente el logo con "STORE" */
-        gap: 0.15em; /* Espacio proporcional entre el logo y el texto */
+        align-items: center; 
+        gap: 0.15em; 
         font-size: 7rem;
         text-transform: uppercase;
         letter-spacing: 0.02em;
@@ -176,7 +172,6 @@
 }
 
 @keyframes logo-glitch {
-    /* 0% a 92%: Estado normal estático */
     0%, 92%, 100% {
         transform: translate(0, 0) skew(0deg);
         filter: 
@@ -184,7 +179,6 @@
             drop-shadow(6px 6px 0px var(--color-orchid))
             drop-shadow(6px 6px 0px var(--color-text-dark));
     }
-    /* Primer tirón: desfase cromático turquesa/orquídea */
     93% {
         transform: translate(-3px, 1px) skew(-8deg);
         filter: 
@@ -192,7 +186,6 @@
             drop-shadow(-5px 0px 0px var(--color-turquoise))
             drop-shadow(5px 0px 0px var(--color-orchid));
     }
-    /* Corte seco a la derecha */
     94.5% {
         transform: translate(3px, -2px) skew(6deg);
         filter: 
@@ -200,11 +193,9 @@
             drop-shadow(4px -2px 0px var(--color-turquoise))
             drop-shadow(-4px 2px 0px var(--color-orchid));
     }
-    /* Vuelve un instante a la normalidad */
     96% {
         transform: translate(0, 0) skew(0deg);
     }
-    /* Último micro-parpadeo antes de quedarse quieto */
     97.5% {
         transform: translate(-2px, 0) skew(3deg);
         filter: 
@@ -318,7 +309,6 @@
     background-size: cover;
     background-position: center;
 
-    /* Código de barras urbano superior centrado */
     &::before {
         content: "";
         display: block;
@@ -343,7 +333,6 @@
         opacity: 0.9;
     }
 
-    /* Título principal con efecto 3D extruido en bloque */
     h2 {
         position: relative;
         font-family: 'Heading Now', sans-serif;
@@ -364,7 +353,6 @@
             -8px 10px 0px var(--color-navy);
     }
 
-    /* Subtítulo con franja tipo cinta recortada turquesa */
     h3 {
         position: relative;
         max-width: 780px;
@@ -388,7 +376,6 @@
         }
     }
 
-    /* Si NO usas <span> dentro del h3, resalta todo el h3 con un subrayado tipo cinta turquesa */
     h3:not(:has(span)) {
         background: linear-gradient(
             180deg,
@@ -398,7 +385,6 @@
         padding: 0 0.5rem;
     }
 
-    /* Párrafos centrados y limpios */
     p {
         max-width: 680px;
         font-size: 1.15rem;
@@ -407,13 +393,11 @@
         margin-bottom: 1.5rem;
     }
 
-    /* Resaltado de la marca <strong>One</strong> en tono orquídea */
     p strong {
         color: var(--color-orchid);
         font-weight: 800;
     }
 
-    /* Último párrafo destacado con subrayado urbano turquesa (como en la imagen) */
     p:last-of-type {
         position: relative;
         font-size: 1.25rem;
@@ -437,7 +421,6 @@
     }
 }
 
-/* Ajuste responsivo en pantallas pequeñas */
 @media (max-width: 768px) {
     .principal-for-we {
         padding: 5rem 1.5rem 6rem;
@@ -449,8 +432,8 @@
 }
 
 /* ==========================================================================
-   ENCABEZADOS COMPARTIDOS DE SECCIÓN
-   ========================================================================== */
+ENCABEZADOS COMPARTIDOS DE SECCIÓN
+========================================================================== */
 
 .principal-section-header {
     display: flex;
@@ -500,8 +483,8 @@
 }
 
 /* ==========================================================================
-   1. CÓMO FUNCIONA (EL PROCESO EN 3 PASOS)
-   ========================================================================== */
+1. CÓMO FUNCIONA (EL PROCESO EN 3 PASOS)
+========================================================================== */
 
 .principal-steps-section {
     width: 100%;
@@ -546,7 +529,6 @@
         padding-bottom: 1rem;
     }
 
-    /* Numeración con la misma tipografía y sombra rosa del Hero / Sobre Nosotros */
     .step-number {
         font-size: 4.2rem;
         font-weight: 900;
@@ -558,7 +540,6 @@
             6px 6px 0px var(--color-navy);
     }
 
-    /* Mismo código de barras de "Sobre nosotros" como etiqueta de cada paso */
     .step-barcode {
         width: 72px;
         height: 24px;
@@ -613,8 +594,8 @@
 }
 
 /* ==========================================================================
-   2. PREVIEW INTERACTIVO DEL CUSTOMIZADOR
-   ========================================================================== */
+2. PREVIEW INTERACTIVO DEL CUSTOMIZADOR
+========================================================================== */
 
 .principal-customizer-section {
     width: 100%;
@@ -783,7 +764,6 @@
     overflow: hidden;
     background-color: var(--color);
     
-    /* Si tu imagen es PNG transparente, esto recorta el fondo a su silueta exacta */
     -webkit-mask: url("/shirt.png") no-repeat center / contain;
     mask: url("/shirt.png") no-repeat center / contain;
     img {
@@ -850,8 +830,8 @@
 }
 
 /* ==========================================================================
-   3. DROPS DESTACADOS / CATÁLOGO BASE
-   ========================================================================== */
+3. DROPS DESTACADOS / CATÁLOGO BASE
+========================================================================== */
 
 .principal-drops-section {
     width: 100%;
@@ -1006,8 +986,8 @@
 }
 
 /* ==========================================================================
-   4. COMUNIDAD / LOOKBOOK ("#TúEresElOrigen") - BENTO GRID
-   ========================================================================== */
+4. COMUNIDAD / LOOKBOOK ("#TúEresElOrigen") - BENTO GRID
+========================================================================== */
 
 .principal-lookbook-section {
     width: 100%;
@@ -1119,8 +1099,8 @@
 }
 
 /* ==========================================================================
-   5. BANNER DE CIERRE (CTA FINAL CON FRANJAS DIAGONALES DEL HERO)
-   ========================================================================== */
+5. BANNER DE CIERRE (CTA FINAL CON FRANJAS DIAGONALES DEL HERO)
+========================================================================== */
 
 .principal-final-cta {
     width: 100%;
@@ -1130,7 +1110,6 @@
     background-image:
         linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 12%, transparent) 1px, transparent 1px),
         linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender) 12%, transparent) 1px, transparent 1px),
-        /* Mismo corte diagonal en turquesa y orquídea del Hero */
         linear-gradient(
             160deg,
             transparent 58%,
@@ -1224,8 +1203,8 @@
 }
 
 /* ==========================================================================
-   RESPONSIVE DE LOS NUEVOS APARTADOS
-   ========================================================================== */
+RESPONSIVE DE LOS NUEVOS APARTADOS
+========================================================================== */
 
 @media (max-width: 1100px) {
     .principal-steps-grid {

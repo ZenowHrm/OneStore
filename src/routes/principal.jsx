@@ -126,7 +126,6 @@ export function Principal() {
         <p>En <strong>One</strong> no vestimos cuerpos, vestimos personalidades. No seguimos tendencias: te damos el espacio para que crees la tuya. Porque cuando te atreves a ser auténtico, dejas de ser uno más para convertirte en el número uno.</p>
     </section>
 
-    {/* 1. CÓMO FUNCIONA (EL PROCESO EN 3 PASOS) */}
     <section className="principal-steps-section">
         <div className="principal-section-header">
             <p className="principal-section-tag">El proceso</p>
@@ -187,7 +186,6 @@ export function Principal() {
         </div>
     </section>
 
-    {/* 2. PREVIEW INTERACTIVO DEL CUSTOMIZADOR */}
     <section id="vista" className="principal-customizer-section">
         <div className="principal-customizer-container">
             <div className="principal-section-header">
@@ -197,7 +195,6 @@ export function Principal() {
             </div>
 
             <div className="customizer-interactive-grid">
-                {/* Controles de color de tela */}
                 <div className="customizer-panel">
                     <h4>1. Color de tela</h4>
                     <div className="customizer-color-list">
@@ -218,7 +215,6 @@ export function Principal() {
                     </div>
                 </div>
 
-                {/* Mockup central */}
                 <div className="customizer-stage">
                     <div className={`customizer-mockup-box tela-${colorActivo.id}`}>
                         <div className="mockup-badge">
@@ -238,7 +234,6 @@ export function Principal() {
                     </div>
                 </div>
 
-                {/* Controles de estampados */}
                 <div className="customizer-panel">
                     <h4>2. Estampado de muestra</h4>
                     <div className="customizer-print-list">
@@ -270,7 +265,6 @@ export function Principal() {
         </div>
     </section>
 
-    {/* 3. DROPS DESTACADOS / CATÁLOGO BASE */}
     <section id="productos" className="principal-drops-section">
         <div className="principal-drops-container">
             <div className="principal-section-header">
@@ -336,7 +330,6 @@ export function Principal() {
         </div>
     </section>
 
-    {/* 4. COMUNIDAD / LOOKBOOK ("#TúEresElOrigen") */}
     <section id="comunidad" className="principal-lookbook-section">
         <div className="principal-lookbook-container">
             <div className="principal-section-header">
@@ -356,7 +349,6 @@ export function Principal() {
                             <div className="lookbook-overlay-content">
                                 <span className="lookbook-piece-name">{item.diseno}</span>
                                 <p className="lookbook-creator">
-                                    {/* ICONO SUGERIDO: Icono de Instagram o TikTok según el creador (ej. icon-tabler-brand-instagram o icon-tabler-brand-tiktok) */}
                                     Creado por <strong>{item.usuario}</strong>
                                 </p>
                             </div>
@@ -367,7 +359,6 @@ export function Principal() {
         </div>
     </section>
 
-    {/* 5. BANNER DE CIERRE (CTA FINAL) */}
     <section className="principal-final-cta">
         <div className="principal-final-cta-container">
             <div className="final-cta-barcode" aria-hidden="true"></div>

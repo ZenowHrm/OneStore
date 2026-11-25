@@ -29,7 +29,6 @@ export function CarritoProvider({ children }) {
         try {
             localStorage.setItem(STORAGE_KEY, JSON.stringify(carrito))
         } catch {
-            // Ignorar errores de almacenamiento si el navegador restringe localStorage
         }
     }, [carrito])
 

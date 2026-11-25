@@ -1,26 +1,24 @@
 /* ==========================================================================
-   SECCIÓN DE CATÁLOGO COMPLETO - ONE STORE
-   Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
-   ========================================================================== */
+SECCIÓN DE CATÁLOGO COMPLETO - ONE STORE
+Estilo: Streetwear, Neo-brutalismo, Cyberpunk & Techwear
+========================================================================== */
 
 .catalogo-page {
     width: 100%;
     min-height: 100vh;
     background-color: var(--color-navy);
     background-image: 
-        /* Rejilla técnica urbana */
         linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 10%, transparent) 1px, transparent 1px),
         linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender) 10%, transparent) 1px, transparent 1px),
-        /* Gradiente de profundidad */
         linear-gradient(180deg, var(--color-text-dark) 0%, var(--color-navy) 40%, var(--color-text-dark) 100%);
     background-size: 48px 48px, 48px 48px, 100% 100%;
-    padding-top: 100px; /* Espacio para el navbar fijo */
+    padding-top: 100px;
     padding-bottom: 6rem;
 }
 
 /* ==========================================================================
-   HEADER DEL CATÁLOGO (HERO BANNER)
-   ========================================================================== */
+HEADER DEL CATÁLOGO (HERO BANNER)
+========================================================================== */
 
 .catalogo-header-section {
     position: relative;
@@ -146,8 +144,8 @@
 }
 
 /* ==========================================================================
-   FILTROS Y BARRA DE BÚSQUEDA
-   ========================================================================== */
+FILTROS Y BARRA DE BÚSQUEDA
+========================================================================== */
 
 .catalogo-controls-container {
     max-width: 1350px;
@@ -273,8 +271,8 @@
 }
 
 /* ==========================================================================
-   GRID DE PRODUCTOS
-   ========================================================================== */
+GRID DE PRODUCTOS
+========================================================================== */
 
 .catalogo-grid-container {
     max-width: 1350px;
@@ -307,8 +305,8 @@
 }
 
 /* ==========================================================================
-   TARJETA DE PRODUCTO (CATÁLOGO CARD)
-   ========================================================================== */
+TARJETA DE PRODUCTO (CATÁLOGO CARD)
+========================================================================== */
 
 .catalogo-card {
     background-color: var(--color-text-dark);
@@ -391,7 +389,6 @@
     }
 }
 
-/* Estado de visualización para productos de concepto / diseño exclusivo */
 .catalogo-concept-visual {
     width: 100%;
     height: 100%;
@@ -459,7 +456,7 @@
             color: var(--color-bg-light);
             line-height: 1.5;
             display: -webkit-box;
-            -webkit-line-clamp: 5;
+            line-clamp: 5;
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
@@ -471,7 +468,6 @@
     }
 }
 
-/* Información de la tarjeta */
 .catalogo-card-info {
     padding: 1.4rem;
     display: flex;
@@ -616,8 +612,8 @@
 }
 
 /* ==========================================================================
-   ESTADO VACÍO (NO RESULTS)
-   ========================================================================== */
+ESTADO VACÍO (NO RESULTS)
+========================================================================== */
 
 .catalogo-no-results {
     grid-column: 1 / -1;
@@ -666,8 +662,8 @@
 }
 
 /* ==========================================================================
-   BANNER INFERIOR CTA PARA CUSTOMIZAR
-   ========================================================================== */
+BANNER INFERIOR CTA PARA CUSTOMIZAR
+========================================================================== */
 
 .catalogo-cta-banner {
     max-width: 1350px;
@@ -741,10 +737,6 @@
         }
     }
 }
-
-/* ==========================================================================
-   RESPONSIVE DESIGN
-   ========================================================================== */
 
 @media (max-width: 768px) {
     .catalogo-page {

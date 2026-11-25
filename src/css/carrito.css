@@ -1,26 +1,23 @@
-/* ==========================================================================
-   CARRITO DRAWER & MODAL DE PAGO - ONE STORE
-   Recicla el patrón checkbox + label (visible tanto en escritorio como móvil)
-   ========================================================================== */
-
 .cart-checkbox {
     display: none;
 }
 
 .cart-background {
-    display: block;
+    display: none;
     position: fixed;
     inset: 0;
     background-color: color-mix(in srgb, var(--color-text-dark) 55%, transparent);
     backdrop-filter: blur(3px);
     z-index: 1010;
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition:
+        opacity 0.3s ease,
+        display 0.3s allow-discrete;
 }
 
 .cart-drawer {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -29,34 +26,38 @@
     background-color: var(--color-text-dark);
     border-left: 3px solid var(--color-turquoise);
     z-index: 1011;
-    display: flex;
     flex-direction: column;
     transform: translateX(100%);
-    visibility: hidden;
-    transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.32s ease;
+    transition:
+        transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+        display 0.32s allow-discrete;
     box-shadow: -10px 0 30px color-mix(in srgb, #000000 50%, transparent);
 }
 
 /* Activación CSS pura mediante checkbox + label */
 .nav-menu-container:has(#cart-toggle:checked) .cart-background {
+    display: block;
     opacity: 1;
-    visibility: visible;
     pointer-events: auto;
+
+    @starting-style {
+        opacity: 0;
+    }
 }
 
 .nav-menu-container:has(#cart-toggle:checked) .cart-drawer {
+    display: flex;
     transform: translateX(0);
-    visibility: visible;
+
+    @starting-style {
+        transform: translateX(100%);
+    }
 }
 
 body:has(#cart-toggle:checked),
 body:has(.cart-modal-overlay) {
     overflow: hidden;
 }
-
-/* ==========================================================================
-   HEADER DEL CARRITO
-   ========================================================================== */
 
 .cart-drawer-header {
     padding: 1.4rem 1.5rem;
@@ -108,10 +109,6 @@ body:has(.cart-modal-overlay) {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-image:
-        linear-gradient(to right, color-mix(in srgb, var(--color-lavender) 6%, transparent) 1px, transparent 1px),
-        linear-gradient(to bottom, color-mix(in srgb, var(--color-lavender) 6%, transparent) 1px, transparent 1px);
-    background-size: 32px 32px;
 }
 
 .cart-items-list {
@@ -270,7 +267,6 @@ body:has(.cart-modal-overlay) {
     align-items: flex-end;
 
     .price-total {
-        font-family: 'Heading Now', sans-serif;
         font-size: 1.35rem;
         color: var(--color-turquoise);
         line-height: 1;
@@ -356,7 +352,6 @@ body:has(.cart-modal-overlay) {
     flex-direction: column;
 
     .subtotal-amount {
-        font-family: 'Heading Now', sans-serif;
         font-size: 2rem;
         color: var(--color-turquoise);
         line-height: 1;
