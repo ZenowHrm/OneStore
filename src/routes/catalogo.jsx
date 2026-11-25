@@ -4,11 +4,12 @@ import { Link } from "react-router"
 
 // Datos desde JSON
 import { CATALOGO } from "../JSON/drops"
+import { useCarrito } from "../context/carritoContext"
 
 export function Catalogo() {
+    const { carrito, ultimoAgregado, agregarAlCarrito } = useCarrito()
     const [busqueda, setBusqueda] = useState("")
     const [filtroActivo, setFiltroActivo] = useState("TODOS")
-    const [agregados, setAgregados] = useState([])
 
     // Filtros por categoría / etiqueta
     const filtros = [
@@ -18,13 +19,6 @@ export function Catalogo() {
         { id: "LIMITADA", label: "Edición Limitada" },
         { id: "CUSTOM", label: "Personalizables" }
     ]
-
-    // Manejar botón de añadir al carrito (feedback visual interactivo)
-    const handleAddToCart = (id) => {
-        setAgregados((prev) => 
-            prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id]
-        )
-    }
 
     // Filtrado de productos en tiempo real
     const productosFiltrados = useMemo(() => {
@@ -153,7 +147,8 @@ export function Catalogo() {
                 <div className="catalogo-products-grid">
                     {productosFiltrados.length > 0 ? (
                         productosFiltrados.map((producto) => {
-                            const isAdded = agregados.includes(producto.id)
+                            const itemEnCarrito = carrito.find((item) => item.id === producto.id)
+                            const recienAgregado = ultimoAgregado === producto.id
                             const hasRealImage = producto.sugerenciaImg && 
                                 (producto.sugerenciaImg.startsWith("/") || producto.sugerenciaImg.startsWith("http"))
 
@@ -231,11 +226,12 @@ export function Catalogo() {
 
                                                 <button 
                                                     type="button" 
-                                                    className={`btn-add-cart ${isAdded ? "added" : ""}`}
-                                                    onClick={() => handleAddToCart(producto.id)}
-                                                    title={isAdded ? "En el carrito" : "Añadir al carrito"}
+                                                    className={`btn-add-cart ${recienAgregado ? "added" : ""}`}
+                                                    onClick={() => agregarAlCarrito(producto)}
+                                                    title="Añadir al carrito"
+                                                    aria-label={`Añadir ${producto.nombre} al carrito`}
                                                 >
-                                                    {isAdded ? (
+                                                    {recienAgregado ? (
                                                         <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-check">
                                                             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                                             <path d="M5 12l5 5l10 -10" />
@@ -249,6 +245,9 @@ export function Catalogo() {
                                                             <path d="M16 19h6" />
                                                             <path d="M19 16v6" />
                                                         </svg>
+                                                    )}
+                                                    {itemEnCarrito && (
+                                                        <span className="cart-item-count">x{itemEnCarrito.cantidad}</span>
                                                     )}
                                                 </button>
                                             </div>

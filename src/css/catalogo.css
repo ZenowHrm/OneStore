@@ -593,6 +593,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 0.4rem;
         transition: background-color 0.2s ease, transform 0.2s ease;
 
         &:hover {
@@ -604,6 +605,12 @@
         &.added {
             background-color: var(--color-turquoise);
             color: var(--color-text-dark);
+        }
+
+        .cart-item-count {
+            font-size: 0.78rem;
+            font-weight: 900;
+            color: inherit;
         }
     }
 }

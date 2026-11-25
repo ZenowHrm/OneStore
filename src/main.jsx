@@ -14,6 +14,8 @@ import { Promo } from "./routes/promo.jsx"
 // Componentes
 import { Menu } from "./components/menu.jsx"
 import { Footer } from "./components/footer.jsx"
+// Contextos
+import { CarritoProvider } from "./context/CarritoProvider.jsx"
 
 function ScrollToHash() {
   const { hash, pathname } = useLocation()
@@ -33,17 +35,19 @@ function ScrollToHash() {
 }
 
 function App() {
-  let app = <BrowserRouter>
-    <ScrollToHash />
-    <Menu />
-    <Routes>
-      <Route path='/' element={<Principal />} />
-      <Route path='/catalogo' element={<Catalogo />} />
-      <Route path='/contacto' element={<Contacto />} />
-      <Route path="/soporte" element={<Promo />} />
-    </Routes>
-    <Footer />
-  </BrowserRouter>
+  let app = <CarritoProvider>
+    <BrowserRouter>
+      <ScrollToHash />
+      <Menu />
+      <Routes>
+        <Route path='/' element={<Principal />} />
+        <Route path='/catalogo' element={<Catalogo />} />
+        <Route path='/contacto' element={<Contacto />} />
+        <Route path="/soporte" element={<Promo />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  </CarritoProvider>
 
   return app
 }
